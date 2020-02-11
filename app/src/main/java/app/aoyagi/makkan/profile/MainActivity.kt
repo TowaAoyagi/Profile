@@ -1,8 +1,9 @@
 package app.aoyagi.makkan.profile
 
+import android.content.res.ColorStateList
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -11,13 +12,50 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        profileImage.visibility = View.INVISIBLE
-        profileCommentText.visibility = View.INVISIBLE
+
 
         button1.setOnClickListener {
 
-            profileImage.visibility = View.VISIBLE
-            profileCommentText.visibility = View.VISIBLE
+            profileImage.setImageResource(R.drawable.randy_image)
+            profileLabelText.text = "名前"
+            profileCommentText.text = "Androidメンタのランディだよ"
+            button1.setBackgroundColor(Color.rgb(0, 180, 220))
+            button2.setBackgroundColor(Color.rgb(150, 150, 150))
+            button3.setBackgroundColor(Color.rgb(150, 150, 150))
+            button4.setBackgroundColor(Color.rgb(150, 150, 150))
+        }
+
+        button2.setOnClickListener {
+
+            profileImage.setImageResource(R.drawable.baseball_image)
+            profileLabelText.text = "スポーツ"
+            profileCommentText.text = "野球観戦が好きで、スタジアムに通っている"
+            button1.setBackgroundColor(Color.rgb(150, 150, 150))
+            button2.setBackgroundColor(Color.rgb(220, 0, 100))
+            button3.setBackgroundColor(Color.rgb(150, 150, 150))
+            button4.setBackgroundColor(Color.rgb(150, 150, 150))
+        }
+
+        button3.setOnClickListener {
+
+            profileImage.setImageResource(R.drawable.donut_image)
+            profileLabelText.text = "好きな食べ物"
+            profileCommentText.text = "キャンディやドーナツが大好き"
+            button1.setBackgroundColor(Color.rgb(150, 150, 150))
+            button2.setBackgroundColor(Color.rgb(150, 150, 150))
+            button3.setBackgroundColor(Color.rgb(0, 180, 120))
+            button4.setBackgroundColor(Color.rgb(150, 150, 150))
+        }
+
+        button4.setOnClickListener {
+
+            profileImage.setImageResource(R.drawable.gadget_image)
+            profileLabelText.text = "趣味"
+            profileCommentText.text = "ガジェットを集めて動かすこと"
+            button1.setBackgroundColor(Color.rgb(150, 150, 150))
+            button2.setBackgroundColor(Color.rgb(150, 150, 150))
+            button3.setBackgroundColor(Color.rgb(150, 150, 150))
+            button4.setBackgroundColor(Color.rgb(220, 100, 0))
         }
 
     }
